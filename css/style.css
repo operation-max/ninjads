@@ -476,7 +476,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 .service-includes-list { display: flex; flex-wrap: wrap; gap: 10px; }
 
 /* ============ WHITE HAT ============ */
-.white-hat { padding: 110px 0; background: var(--black-soft); }
+.toolkit { padding: 110px 0; background: var(--black-soft); }
 
 /* ============ PROCESS ============ */
 .process {
