@@ -454,6 +454,47 @@ ul { list-style: none; margin: 0; padding: 0; }
   clip-path: polygon(0 0, 100% 50%, 0 100%);
 }
 
+.service-card { display: flex; flex-direction: column; }
+.service-card .service-list { margin-bottom: 28px; }
+.service-cta { margin-top: auto; justify-content: center; }
+.service-card-featured {
+  border-color: var(--silver-700);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+}
+.service-card-featured::after { opacity: 0.16; }
+.service-flag {
+  position: absolute;
+  top: 18px; right: 18px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--black);
+  background: var(--accent-2);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.service-price {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 16px;
+}
+.service-price strong {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--silver-100);
+}
+.service-price span {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--silver-500);
+}
+
 /* ============ SERVICE INCLUDES BAR ============ */
 .service-includes {
   margin-top: 30px;
