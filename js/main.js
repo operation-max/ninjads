@@ -62,6 +62,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // GTM: track clicks on contact CTAs (Telegram links)
+  window.dataLayer = window.dataLayer || [];
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href*="t.me/"]');
+    if (!link) return;
+    const section = link.closest('section[id], header, footer');
+    window.dataLayer.push({
+      event: 'contact_cta_click',
+      cta_text: link.textContent.trim() || link.getAttribute('aria-label') || '',
+      cta_location: link.classList.contains('telegram-fab')
+        ? 'floating_button'
+        : section ? (section.id || section.tagName.toLowerCase()) : 'page',
+    });
+  });
+
   // Back to top button
   const backToTop = document.getElementById('backToTop');
   if (backToTop) {
